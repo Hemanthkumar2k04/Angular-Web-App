@@ -1,0 +1,11 @@
+<div class="home-container">
+    <h1>Welcome, {{username}}</h1>
+    <div class="basic-box">
+        <h2>Wanna say something to the server?</h2><br>
+        <input type="text" name="basic-message" id="basic-message" [(ngModel)]="message"/>
+        <button type="submit" (click)="sendMessage()" onclick="">Send</button>
+    </div><br>
+    <form (ngSubmit)="onLogout()">
+        <button type="submit">Logout</button>
+    </form>
+</div>
