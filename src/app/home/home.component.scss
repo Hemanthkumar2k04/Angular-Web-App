@@ -1,0 +1,21 @@
+.account-logo svg {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+  }
+  
+  .account-logo svg:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+  }
+  .home-container {
+    position: relative; /* Ensures child elements can be positioned relative to this container */
+  }
+  
+  .account-logo {
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Distance from the top of the container */
+    right: 50px; /* Distance from the right of the container */
+    z-index: 10; /* Ensures the logo is on top of other elements */
+  }
+    

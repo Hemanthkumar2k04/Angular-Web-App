@@ -8,13 +8,15 @@ import { RegisterComponent } from './app/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { importProvidersFrom } from '@angular/core';
+import { AccountComponent } from './app/account/account.component';
 
 
 const routes: Route[] = [
 
   {path:'login', component: LoginComponent},
   {path:'home', component: HomeComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'account', component: AccountComponent}
 ]
 
 const appConfig = {

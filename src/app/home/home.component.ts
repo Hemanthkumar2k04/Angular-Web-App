@@ -15,6 +15,9 @@ export class HomeComponent {
   username: string | null = localStorage.getItem('username');
   message:string = '';
   constructor(private messageServices:MessageService, private authService: AuthService, private router: Router) {}
+  navigateToPage(){
+    this.router.navigate(['account']);
+  }
   sendMessage(){
     if(this.message.trim()){
       this.messageServices.sendMessage(this.message, this.username).subscribe({

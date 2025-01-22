@@ -25,4 +25,8 @@ export class AuthService {
   isAuthenticated(): boolean {
     return !!localStorage.getItem('username'); 
   }
+
+  resetPassword(username: string, oldPassword: string, newPassword: string){
+    return this.http.post<string>(`${this.apiUrl}/resetPassword`, {username, oldPassword, newPassword});
+  }
 }
