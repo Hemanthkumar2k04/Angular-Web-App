@@ -1,5 +1,6 @@
+
 <body>
-    <div class="container">
+    <div class="reset-container">
         <h1>Reset your password</h1>
         <form [formGroup]="resetPasswordForm" (ngSubmit)="onSubmit()">
             <label for="oldPassword">Old Password: </label>
@@ -12,7 +13,7 @@
             <input type="password" id="newPassword" formControlName="newPassword"/>
             <div *ngIf="resetPasswordForm.get('newPassword')?.invalid && resetPasswordForm.get('newPassword')?.touched">
                 New Password cannot be empty
-            </div>
+            </div><br>
             <button type="submit" [disabled]="resetPasswordForm.invalid">Reset</button>
         </form>
     </div>

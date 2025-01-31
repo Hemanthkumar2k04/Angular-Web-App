@@ -14,6 +14,7 @@ import { NgIf } from '@angular/common';
 export class AccountComponent {
   resetPasswordForm: FormGroup;
   constructor(private router: Router, private authService: AuthService, private toaster: ToastrService){
+    if(!this.authService.isAuthenticated()){this.router.navigate(['login']);}
     this.resetPasswordForm = new FormGroup({
       oldPassword: new FormControl('', [Validators.required]),
       newPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),

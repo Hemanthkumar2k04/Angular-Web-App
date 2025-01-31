@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SignupService } from '../signup.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -13,7 +13,10 @@ import { FormsModule, ReactiveFormsModule, FormGroup, FormControl, Validators, A
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'] // Fixed property name
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit{
+  ngOnInit(): void {
+    localStorage.clear();
+  }
   registerForm: FormGroup;
 
   constructor(private router: Router, private signup: SignupService, private toaster: ToastrService) {
